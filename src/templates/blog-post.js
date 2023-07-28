@@ -6,7 +6,6 @@ import '../fonts/fonts-post.css';
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import Signup from '../components/Signup';
 import Panel from '../components/Panel';
 import { formatPostDate, formatReadingTime } from '../utils/helpers';
 import { rhythm, scale } from '../utils/typography';
@@ -17,8 +16,8 @@ import {
   replaceAnchorLinksByLanguage,
 } from '../utils/i18n';
 
-const GITHUB_USERNAME = 'gaearon';
-const GITHUB_REPO_NAME = 'overreacted.io';
+const GITHUB_USERNAME = 'mhdarifmrstn';
+const GITHUB_REPO_NAME = 'famerstin';
 const systemFont = `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif`;
@@ -136,9 +135,7 @@ class BlogPostTemplate extends React.Component {
       1,
       enSlug.length - 1
     )}/index${lang === 'en' ? '' : '.' + lang}.md`;
-    const discussUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(
-      `https://overreacted.io${enSlug}`
-    )}`;
+    const discussUrl = 'https://t.me/jpnfads';
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -178,7 +175,7 @@ class BlogPostTemplate extends React.Component {
             <footer>
               <p>
                 <a href={discussUrl} target="_blank" rel="noopener noreferrer">
-                  Discuss on Twitter
+                  Discuss on Telegram
                 </a>
                 {` • `}
                 <a href={editUrl} target="_blank" rel="noopener noreferrer">
@@ -194,9 +191,7 @@ class BlogPostTemplate extends React.Component {
               margin: '90px 0 40px 0',
               fontFamily: systemFont,
             }}
-          >
-            <Signup cta={post.frontmatter.cta} />
-          </div>
+          ></div>
           <h3
             style={{
               fontFamily: 'Montserrat, sans-serif',
@@ -211,7 +206,7 @@ class BlogPostTemplate extends React.Component {
               }}
               to={'/'}
             >
-              Overreacted
+              Famerstin
             </Link>
           </h3>
           <Bio />
